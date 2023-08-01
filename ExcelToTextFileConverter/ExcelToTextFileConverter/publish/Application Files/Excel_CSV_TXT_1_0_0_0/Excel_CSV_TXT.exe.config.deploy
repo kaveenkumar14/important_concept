@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+    </startup>
+	<appSettings>
+		<add key="Input" value="C:\Users\ckav001\OneDrive - Innocap\Documents\File_handling\Input"/>
+		<add key="Output" value="C:\Users\ckav001\OneDrive - Innocap\Documents\File_handling\Output"/>
+		<add key="Prefix" value=""/>
+	</appSettings>
+	
+	
+</configuration>
