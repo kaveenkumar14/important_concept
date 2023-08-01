@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Runs>
+	<Sheet>
+		<TemplateName>Counterparty Master</TemplateName>
+		<IsRequiredEngineAPI>false</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Counterparty_Identifier,Customer_Identifier,Service_Provider_Identifier</Headers>
+		<Stats></Stats>
+		<GroupBys></GroupBys>
+		<SecurityLevel>false</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_CounterpartyMaster_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Fund GL</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Customer_Identifier,Fund_Identifier,NAV,Net_Income,Period_Ending,Regulatory_Asset_Value,Subscriptions,Withdrawals</Headers>
+		<Stats>intFundUniqueID,AUMContribution,QuartertoDatePnL,Admin Long MV Total,QTD Subscription,QTD Redemption</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>false</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_FundGL_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Fund</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Base_Currency_ISO_Code,Customer_Identifier,Fund_Identifier,Fund_Name,Generic_Fund_Type</Headers>
+		<Stats>varCurrencyISO,intFundUniqueID,varFundLongName</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>false</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_Fund_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Fund Holdings</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Custodian_Identifier,Customer_Identifier,Fund_Identifier,Mark_to_Market_Value,Market_Value,Period_Date,Position_Identifier,Position_Type,Security_Identifier,Cost,YTD GL</Headers>
+		<Stats>intFundUniqueID,AUMContribution,Analysis Date,HMSecurityIDExternal,Long-Short,Premium Amount,YeartoDatePnL</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>true</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_FundHoldings_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Fund Service Provider Info</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Customer_Identifier,Fund_Identifier,Period_Ending,Relationship_Started,Service_Provider_Identifier,Service_Type,TM_AUM_Under_Authority</Headers>
+		<Stats>intFundUniqueID,Analysis Date,AUMContribution</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>true</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_FundServiceProviderInfo_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Security Master</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Customer_Identifier,Security_Identifier,Is_Listed,ISOCountryCode,Is_Investment_Grade,Is_Notional,Is_Financial,Maturity,Is_Resecuritization,Tranche_Seniority_Type,Issuer_Is_Affiliate,Is_NFA_Governed_Product,ICBCode,Asset_Type,Bloomberg Ticker,ISIN,Underlying_Security_Identifier</Headers>
+		<Stats>HMSecurityIDExternal,Request ID Type,Country Code,Rating,Security Type Level 1,Industry,Maturity Date,Security Type Level 2,Tranche,CPOPQR ICB code,GAT Sub Type,IDTICKER,ISIN,Underlying HM Security ID,Underlying Country Code,Underlying Rating,Underlying Security Type Level 1,Underlying Industry,Underlying Security Type Level 2,Underlying Tranche,Underlying HM GICS Level 2,Underlying GAT Sub Type,UNDL_ID_TICKER,Underlying ISIN</Stats>
+		<GroupBys>Account Name,HHoldingData ID</GroupBys>
+		<SecurityLevel>true</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_SecurityMaster_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Service Provider Master</TemplateName>
+		<IsRequiredEngineAPI>false</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Address,Contact_Phone,Customer_Identifier,Legal_Name,NFA_ID_Number,Service_Provider_Identifier</Headers>
+		<Stats></Stats>
+		<GroupBys></GroupBys>
+		<SecurityLevel>false</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_ServiceProviderMaster_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Fund Reporting Master</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Customer_Identifier,Fund_Identifier,Group_Identifier,Fund_Group_Type,Group_Ticker,Group_Name,Fund_Group_Role,Form_Type,Is_Included,Reporting_Mode,Reporting_Fund_Type,Is_Qualifying</Headers>
+		<Stats>intFundUniqueID</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>false</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_FundReportingMaster_{ContextDate}</FileNameFormat>
+	</Sheet>
+	<Sheet>
+		<TemplateName>Final Answers</TemplateName>
+		<IsRequiredEngineAPI>true</IsRequiredEngineAPI>
+		<IsMonthly>false</IsMonthly>
+		<IsPortfolio>false</IsPortfolio>
+		<IsIncludeTotalRow>false</IsIncludeTotalRow>
+		<Headers>Customer_Identifier,Filing_Period,Fund_Identifier,Item_Name,Item_Value,Count</Headers>
+		<Stats>intFundUniqueID</Stats>
+		<GroupBys>Account Name</GroupBys>
+		<SecurityLevel>true</SecurityLevel>
+		<LoginId>37130</LoginId>
+		<FileNameFormat>CPOPQR_FinalAnswers_{ContextDate}</FileNameFormat>
+	</Sheet>
+</Runs>
